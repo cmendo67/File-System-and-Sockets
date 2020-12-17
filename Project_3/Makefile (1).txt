@@ -1,0 +1,29 @@
+﻿all: server1 client1 server2 client1 server3 client1 server4 client1 server5 client1 
+exes = server1 client1 server2 client1 server3 client1 server4 client1 server5 client1
+
+Side Note: Make the server run before the client. In order for client to connect to server, you must use the servers IP address and port number. Servers IP address is “127.0.0.1”, localhost. The port number is what ever the user inserts when creating the server. 
+
+server1: g++ server1.cpp -lpthread -o server1 
+	   ./server1 <port Number>
+client1:  g++ client1.cpp -o client1 
+	./client1 localhost <server port number> or ./client1 127.0.0.1 <server port number>
+
+server2: g++ server2.cpp -lpthread -o server2
+	 ./server2 <port number>
+client1:  g++ client1.cpp -o client1 
+	./client1 localhost <server port number> or ./client1 127.0.0.1 <server port number>
+
+server3: g++ server3.cpp -lpthread -o server3
+	./server3 <port Number> <Track to Track Time> <Cylinder> <Sectors> < File Name>
+client1:  g++ client1.cpp -o client1 
+	./client1 localhost <server port number> or ./client1 127.0.0.1 <server port number>
+
+server3: g++ server3.cpp -lpthread -o server3 
+	   ./server1 <port Number>
+client1:  g++ client1.cpp -o client1 
+	./client1 localhost <server port number> or ./client1 127.0.0.1 <server port number>
+
+server4: g++ server4.cpp -lpthread -o server4 
+	   ./server1 <port Number>
+client1:  g++ client1.cpp -o client1 
+	./client1 localhost <server port number> or ./client1 127.0.0.1 <server port number>
